@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" method="upgrade" type="plugin" group="user">
+	<name>Send Joomla Users an Email on Account Deactivation</name>
+	<author>Martin Müller</author>
+	<copyright>Martin Müller, 2013</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<creationDate>July 09, 2013</creationDate>
+	<authorUrl>http://martin-mueller.info</authorUrl>
+	<version>0.1</version>
+	<description>
+		Send Joomla Users an Email on Account Deactivation.
+	</description>
+	<files>
+		<filename plugin="email_user_on_deactivation">email_user_on_deactivation.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="subject" type="text" default="Account Deactivation" label="Your email subject" description="The subject of the email." />        
+				<field name="message" type="textarea" default="Your Account has been deactivated." label="Your message" description="Your Message to the User. You can use the following codes: {name}, {username}, {lastvisit} and {replyto}." />        
+			</fieldset>
+		</fields>
+	</config>
+	<params>
+		<param name="message" type="textarea" default="Your Account has been deactivated." label="Your message" description="Your Message to the User." />
+		<param name="subject" type="text" default="Account Deactivation" label="Your email subject" description="The subject of the email." />
+	</params>
+</install>
